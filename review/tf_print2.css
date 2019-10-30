@@ -76,6 +76,7 @@ a::after{
 
 
 /* Page Break Styles */
+/*this will cancel the page breaks for the asides*/
 aside:nth-of-type(n+2){
    page-break-before: always;
 }

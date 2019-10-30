@@ -22,6 +22,7 @@
 
 
 /* General Flex Styles */
+/*this will order the elements in the body from left to right*/
 body{
    display: -webkit-flex-box;
    display: flex;
@@ -96,6 +97,7 @@ nav.horizontal ul{
 	Tablet and Desktop Devices: 481px or more 
    ============================================
 */
+/*this will only change electronics*/
 @media only screen and (min-width: 481px){
    nav.horizontal ul{
       height: 160px;
