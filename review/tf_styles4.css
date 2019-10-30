@@ -23,38 +23,38 @@
 
 /* General Flex Styles */
 body{
-   display: flex;
    display: -webkit-flex-box;
-   flex-flow: row wrap;
+   display: flex;
    -webkit-flex-flow: row wrap;
+   flex-flow: row wrap;
 }
 section#left{
-   flex: 8 1 351px;
    -webkit-flex: 8 1 130px;
+   flex: 8 1 351px;
 }
 section#right{
-   flex: 8 1 351px;
    -webkit-flex: 8 1 351px;
+   flex: 8 1 351px;
 }
 section#tips{
-   display: flex;
    display: -webkit-flex-box;
-   flex-flow: row wrap;
+   display: flex;
    -webkit-flex-flow: row wrap;
+   flex-flow: row wrap;
 }
 section#tips article{
-   flex: 2 1 351px;
    -webkit-flex: 2 1 351px;
+   flex: 2 1 351px;
 }
 section#tips aside{
-   flex: 1 2 250px;
    -webkit-flex: 1 2 250px;
+   flex: 1 2 250px;
 }
 nav.horizontal ul{
-   display: flex;
    display: -webkit-flex-box;
-   flex-flow: column wrap;
+   display: flex;
    -webkit-flex-flow: column wrap;
+   flex-flow: column wrap;
 }
 
 
@@ -62,22 +62,31 @@ nav.horizontal ul{
 	Mobile Devices: 0 to 480px 
    ===============================
 */
-@media only screen (max-width: 480px){
+@media only screen and (max-width: 480px){
    nav.vertical ul{
-      display: flex;
       display: -webkit-flex-box;
-      flex-flow: row wrap;
-      -webkit-flex-flow: row wrap;
+      display: flex;
+      -webkit-flex-flow: column wrap;
+      flex-flow: column wrap;
       height: 240px;
    }
    section#left{
-      order: 99;
       -webkit-order: 99;
+      order: 99;
    }
    footer{
-      align-self: flex-end;
+      -webkit-order: 100;
+      order: 100;   
    }
-   nav li
+   a#navicon{
+      display: block;
+   }
+   nav.horizontal ul{
+      display: none;
+   }
+   a#navicon:hover+ul, nav.horizontal ul:hover{
+      display: block;
+   }
 }
 
 
@@ -87,6 +96,11 @@ nav.horizontal ul{
 	Tablet and Desktop Devices: 481px or more 
    ============================================
 */
+@media only screen and (min-width: 481px){
+   nav.horizontal ul{
+      height: 160px;
+   }
+}
 
 
 
